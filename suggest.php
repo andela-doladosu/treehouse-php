@@ -98,11 +98,11 @@ include("inc/header.php");
             <table>
                 <tr>
                     <th><label for="name">Name (required)</label></th>
-                    <td><input type="text" id="name" name="name" value="<?php if (isset($name)) { echo $name;} ?>" /></td>
+                    <td><input type="text" id="name" name="name" value="<?php if (isset($name)) { echo htmlspecialchars($name);} ?>" /></td>
                 </tr>
                 <tr>
                     <th><label for="email">Email (required)</label></th>
-                    <td><input type="text" id="email" name="email" value="<?php if (isset($email)) { echo $email;} ?>"/></td>
+                    <td><input type="text" id="email" name="email" value="<?php if (isset($email)) { echo htmlspecialchars($email);} ?>"/></td>
                 </tr>
                 <tr>
                     <th><label for="category">Category (required)</label></th>
@@ -117,7 +117,7 @@ include("inc/header.php");
                 </tr>
                 <tr>
                     <th><label for="title">Title (required)</label></th>
-                    <td><input type="text" id="title" name="title" value="<?php if (isset($title)) { echo $title;} ?>"/></td>
+                    <td><input type="text" id="title" name="title" value="<?php if (isset($title)) { echo htmlspecialchars($title);} ?>"/></td>
                 </tr>
                 <tr>
                     <th>
@@ -433,11 +433,11 @@ include("inc/header.php");
                 </tr>
                 <tr>
                     <th><label for="year">Release Year</label></th>
-                    <td><input type="text" id="year" name="year" value="<?php if (isset($year)) { echo $year;} ?>"/></td>
+                    <td><input type="text" id="year" name="year" value="<?php if (isset($year)) { echo htmlspecialchars($year);} ?>"/></td>
                 </tr>
                 <tr>
                     <th><label for="details">Additional item details</label></th>
-                    <td><textarea id="details" name="details"><?php if (isset($details)) { echo $details;} ?></textarea></td>
+                    <td><textarea id="details" name="details"><?php if (isset($details)) { echo htmlspecialchars($details);} ?></textarea></td>
                 </tr>
             </table>
             <input type="submit" value="send" />
